@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "maxVector_rec.h"
+#include "maxVector_rec.c"
 
 int main(){
     int v[]={0, 50, 9, 6, 7, 1, 3, 5, 18, 3}, sol;

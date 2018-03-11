@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "mergeSort.h"
+#include "mergeSort.c"
 
 int main(){
     int v[]={0, 3, 5, 8, 2, 4, 9, 6, 7};

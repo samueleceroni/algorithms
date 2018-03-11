@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "insertionSort.h"
+#include "insertionSort.c"
 
 int main(){
     int v[]={3, 5, 9, 4, 7, 8, 6, 2, 15, 84, 45}, i, dim;
