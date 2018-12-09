@@ -7,7 +7,7 @@ using namespace std;
 struct SumSegmentTree {
     private:
     vector<int> v; // vettore che contiene l'albero
-    vector<int> u;
+    vector<int> u; // vettore che contriene l'update
     int n; //numero nodi interni
     const int NULL_VALUE = 0; //zero dell'operazione
     public:
