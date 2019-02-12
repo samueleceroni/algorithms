@@ -17,14 +17,14 @@ typedef struct edge{
 	}
 }edge;
 
-vector<int> prim(const vvii &graph){
+vector<edge> prim(const vvii &graph){
 	vector<edge> sol;
-	priority_queue<edge> pq;
-	vector<int> visited(n, 0);
+	priority_queue<edge, vector<edge>, greater<edge>> pq;
+	vector<int> visited(graph.size(), 0);
 	int mst_w = 0;
 	int cont = 0;
 	int currNode = 0;
-	while(cont < graph.size()){
+	while(cont < graph.size() - 1){
 		
 		visited[currNode] = 1;
 
@@ -61,11 +61,24 @@ int main(){
 		graph[from].push_back(make_pair(to, weight));
 		graph[to].push_back(make_pair(from, weight));
 	}
-	vi prev(n, -1);
-	vi spfav = spfa(graph, 0, prev);
-
-	for(int i = 0; i < n; i++){
-		cout << i << " dist:" << spfav[i] << " | prev:" << prev[i] << endl;
+	vector<edge> primv = prim(graph);
+	cout << "----------\n";
+	for(auto x : primv){
+		cout << x.from << " " << x.to << " " << x.weight << '\n';
 	}
 
 }
+/*
+
+6 9
+0 1 7
+0 2 9
+0 5 14
+1 2 10
+1 3 15
+2 5 2
+2 3 11
+3 4 6
+4 5 9
+
+*/

@@ -19,7 +19,7 @@ bool visit(int currNode, const vector<vector<int> > & g, vector<int> &sol, vecto
 vector<int> topoSort(const vector<vector<int> > &g){
     vector<int> marks(g.size(), 0);
     vector<int> sol;
-    for(auto nextEl : marks){
+    for(int nextEl = 0; nextEl < g.size(); nextEl++){
         if(!visit(nextEl, g, sol, marks)){return vector<int>();}
     }
     reverse(sol.begin(), sol.end());
