@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <limits.h>
-#include "is_prime.c"
+#include "is_prime.h"
 
 
 int main()
